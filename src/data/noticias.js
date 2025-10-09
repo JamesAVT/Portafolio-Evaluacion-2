@@ -1,6 +1,6 @@
 const noticias = [{
     id: 1,
-    name: 'Primera noticia',
+    name: 'Los 20 programas que no pueden faltar en el PC de un hacker con Kali Linux',
     description: 'La noticia de ADSLZone enumera 20 herramientas imprescindibles para Kali Linux, usadas por profesionales de ciberseguridad y hackers éticos para auditorías, pruebas de penetración y análisis forense. Entre ellas destacan Nmap, Metasploit, Wireshark, Burp Suite, ente otras. Estas aplicaciones permiten escaneo de redes, descifrado de contraseñas y detección de vulnerabilidades.',
     link: 'https://www.adslzone.net/noticias/internet/programas-faltar-kali-linux/',
     tecnologias: 'Nmap | Metasploit Framework | Wireshark | Burp Suite | SQLmap | Netcat',
@@ -9,7 +9,7 @@ const noticias = [{
 },
 {
     id: 2,
-    name: 'Segunda noticia',
+    name: 'Lenguajes de programación, qué son, cuántos hay y cómo funcionan',
     description: 'La noticia de UNIR México explica qué son los lenguajes de programación, su importancia en el desarrollo de software y cómo han evolucionado con el tiempo. Se destacan como herramientas escenciales para crear desde simples sitios web hasta complejas plataformas.',
     link: 'https://mexico.unir.net/noticias/ingenieria/lenguajes-programacion/',
     tecnologias: 'C++ | Java | PHP | Python | Rust | Pascal | Ruby',
@@ -17,7 +17,7 @@ const noticias = [{
 },
 {
     id: 3,
-    name: 'tercera',
+    name: 'Python mantiene popularidad!',
     description: 'Python sigue siendo uno de los lenguajes más populares! Lo usan principalmente en análisis de datos y machine learning, con VS Code y PyCharm como editores favoritos!',
     link: 'https://www.redusers.com/noticias/python-mantiene-popularidad/',
     tecnologias: 'Python',
