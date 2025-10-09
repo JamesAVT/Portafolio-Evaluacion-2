@@ -1,0 +1,66 @@
+/* Contenedor general que centra todo el card dentro de la página */
+.detalle-container {
+    display: flex; /* Activa el Flexbox para alinear los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 2rem 0; /* Margen superior e inferior */
+}
+
+/* Card principal */
+.detalle-card {
+    max-width: 800px; /* Ancho máximo para no estirarse demasiado */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    border: none; /* Sin borde */
+    display: flex; /* Activa el Flexbox para alinear los elementos */
+    flex-direction: column; /* Los elementos van de arriba hacia abajo */
+    align-items: center; /* Centra horizontalmente los elementos */
+}
+
+/* Imagen del proyecto */
+.detalle-img {
+    width: 60%; /* Ocupa el 60% del ancho del card */
+    max-height: 400px; /* Altura máxima */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block; /* Hace que la imagen se comporte como bloque, ocupando todo el ancho disponible y centarla con margin*/ 
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Body del card que contiene el contenido textual */
+.detalle-body {
+    padding: 2rem; /* Espaciado interno */
+    
+}
+
+/* Titulo del proyecto */
+.detalle-titulo {
+    margin-bottom: 1rem; /* Espacio debajo */
+    text-align: center; /* Centra el texto */
+}
+
+/* Descripcion del proyecto */
+.detalle-description {
+    margin-bottom: 1rem; /* Espacio debajo */
+    color: #333333; /* Color gris */
+
+}
+
+/* Texto Link */
+.link {
+    font-weight: bold; /* Engrosa el texto */
+    margin-bottom: 0.5rem; /* Espacio debajo */
+}
+
+/* Contenedor del link del proyecto*/
+.detalle-link {
+    margin-bottom: 1.5rem; /* Espacio debajo del link*/
+}
+
+/* Texto Tecnologia */
+.tecnologia {
+    font-weight: bold /* Engrosa el texto */
+}
+
+/* Lista de tecnologias utilizadas */
+.detalle-tecnologia {
+    color: #007bff; /* Color azul */
+}

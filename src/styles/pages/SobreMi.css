@@ -1,0 +1,38 @@
+/* Contenedor principal que centra todo el contenido en la pantalla */
+.sobre-mi-container {
+    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura visible del navegador*/
+    display: flex; /* Activa el Flexbox para alinear los elementos */
+    flex-direction: column; /* Coloca los elementos (rectángulo, texto, etc) uno debajo del otro*/
+    justify-content: center; /* Centra verticalmente el contenido en la pantalla*/
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto dentro de los elementos al centro*/
+    color: white; /* Color del texto general en blanco*/
+    padding: 2rem; /* Agrega espacio interno alrededor del contenido*/
+    backdrop-filter: blur(5px); /* Aplica un ligero desenfoque al fondo detrás del contenedor*/
+}
+
+/* Rectangulo (caja) que contiene el texto "Sobre mi" */
+.sobre-mi-box {
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* borde para resaltar la caja*/
+    border-radius: 20px; /* Bordes redondeados del rectángulo*/
+    padding: 2rem 3rem; /* Espaciado interno: 2rem arriba/abajo y 3rem a los lados*/
+    max-width: 800px; /* Ancho máximo de la caja, evita que se estire demasiado en pantallas grandes*/
+    color: white; /* Color del texto dentro de la caja*/
+    text-align: center; /* Centra el texto dentro del rectángulo*/
+    backdrop-filter: blur(10px); /* Efecto vidrio*/
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra sutil de profundidad*/ 
+}
+
+/* Título principal*/
+.titulo-sobre-mi {
+    font-size: 2.5rem; /* Tamaño de letra*/
+    margin-bottom: 1rem; /* Espaciado debajo del título para separar del texto*/
+}
+
+/* Párrafos dentro del rectángulo*/
+.texto-sobre-mi {
+    max-width: 700px; /* Limita el ancho del texto para mejorar legibilidad*/
+    font-size: 1.2rem; /* Tamaño de letra*/
+    line-height: 1.6; /* Aumenta el espacio entre líneas*/
+}

@@ -1,0 +1,52 @@
+/* Contenedor principal de la página (controla todo el layout de la página como altura, centrado, etc) */
+.home-container {
+    min-height: 100vh; /* Asegura que la página siempre tenga la altura completa de la ventana del navegador*/
+    display: flex; /* Usamos Flexbox para alinear los elementos fácilmente */
+    flex-direction: column; /* Ponemos los elementos uno debajo del otro (logo arriba, texto abajo) */
+    justify-content: center; /* Centra todo verticalmente en la página */
+    align-items: center; /* Centra todo horizontalmente en la página */
+    text-align: center; /* Centra el texto denro de cada elemento (h2, p, etc) */
+}
+
+/* Contenedor del logo circular (creamos el círculo para la imagen del logo) */
+.logo-circle {
+    width: 200px; /* Ancho del círculo */
+    height: 200px; /* Alto del círculo */
+    border-radius: 50%; /* Hace que el div sea circular */
+    overflow: hidden; /* Recorta la imagen que sobresalga del círculo */
+    margin-bottom: 1.5rem; /* Separación entre el logo y el texto de abajo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra suave alrededor del círculo para que resalte */
+}
+
+/* Estilo para la imagen del logo (hacemos que la imagen se adapte al círculo sin estirarse ni deformarse) */
+.logo-circle img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Hace que la imagen se ajuste al tamaño del div sin deformarse */
+}
+
+/* Color del texto del nombre */
+.nombre-autor {
+    color: white;
+}
+
+/* Color del texto de la breve info debajo de nombre*/
+.informacion-autor {
+    color: white;
+}
+
+/* Botón de GitHub*/
+.github-button {
+    display: inline-block; /* Hace que el <a> se comporte como bloque de línea, */
+    padding: 0.6em 1.2em; /* Espaciado interno: 0.6em arriba/abajo y 1.2em izquierda/derecha */
+    background-color: #24292f; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border-radius: 8px; /* Bordes redondeados del botón */
+    text-decoration: none; /* Elimina cualquier decoración de texto */
+    font-weight: 500; /* Grosor de la fuente*/
+    transition: background-color 0.25s; /* Animación suave de 0.25s al cambiar el color de fondo (hover) */
+}
+
+.github-button:hover {
+    background-color: #444c56; /* Color de fondo cuando pasamos el mouse por encima (hover) */
+}

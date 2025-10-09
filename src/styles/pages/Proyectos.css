@@ -1,0 +1,23 @@
+/* Titulo Proyectos */
+.titulo-proyectos {
+    color: white; /* Color blanco */
+    text-align: center; /* Centra el texto */
+}
+
+/* Row que contiene la cards */
+.proyectos-row {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    flex-wrap: wrap; /* Para que se acomoden en varias filas si es necesario */
+    gap: 1rem; /* Espacio entre cards */
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3);
+}

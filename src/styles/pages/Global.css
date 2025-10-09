@@ -1,0 +1,9 @@
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('https://img.freepik.com/fotos-premium/abstracto-pui50-papel-tapiz-fondo-claro-gradiente-colorido-borroso-movimiento-suave-suave-brillo-brillante_792836-131829.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
