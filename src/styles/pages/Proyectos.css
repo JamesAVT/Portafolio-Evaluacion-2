@@ -12,12 +12,13 @@
     gap: 1rem; /* Espacio entre cards */
 }
 
+/* Se aplica a las tarjetas de proyectos */
 .custom-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el cambio de tamaño y sombra */
+    cursor: pointer; /* Indica que la tarjeta es interactiva*/
 }
 
 .custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Aplica un efecto de zoom*/
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3); /* Añade una sombra para así resaltar la tarjeta*/
 }

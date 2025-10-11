@@ -31,7 +31,7 @@ describe("Componente ProyectoDetalle", () => {
         expect(screen.getByText(proyecto.tecnologias)).toBeTruthy();
 
         // Verifica que la imagen se cargue con el src correcto
-        const imagen = screen.getByAltText(proyecto.name);
-        expect(imagen.src.endsWith('6da18a021870ddc0262347a3d0394808.jpg')).toBe(true);
+        const imagen = screen.getByAltText(proyecto.name); // Busca la imagen por su atributo alt
+        expect(imagen.src.endsWith('6da18a021870ddc0262347a3d0394808.jpg')).toBe(true); // Asegura que el src sea el esperado
     });
 })

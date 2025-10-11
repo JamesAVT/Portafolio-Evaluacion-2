@@ -5,6 +5,14 @@ import Text from '../components/atoms/Text.jsx';
 import Button from '../components/atoms/Button.jsx';
 import '../styles/pages/Home.css';
 
+/* 
+  Esta página representa la pantalla principal del portafolio, que contiene:
+  - Logo principal en un contenedor circular.
+  - Mi nombre
+  - Información mia breve
+  - Botón que dirige a mi perfil de GitHub.
+*/
+
 function Home() {
  return (
    <Container className="home-container">
@@ -17,8 +25,8 @@ function Home() {
     variant="primary" 
     className='github-button'
     href="https://github.com/JamesAVT"
-    target="_blank"
-    rel="noreferrer"
+    target="_blank" // Abre una nueva pestaña 
+    rel="noreferrer" // Para seguridad y privacidad, evitando que la página de destino pueda acceder a la página original
     >
       GitHub
     </Button>

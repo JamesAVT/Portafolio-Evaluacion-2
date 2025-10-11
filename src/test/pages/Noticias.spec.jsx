@@ -10,6 +10,7 @@ describe("Componente Noticias", () => {
     // Verifica que se renderiza correctamente el título y las tarjetas
     it("debe renderizar el título y todas las tarjetas de noticias", () => {
         // Renderizamos el componente Noticias
+        // El MemoryRouter permite simular rutas de React Router en los test
         render(
             <MemoryRouter>
                 <Noticias />

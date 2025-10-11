@@ -11,6 +11,7 @@ import NoticiaDetalle from './pages/NoticiaDetalle';
 function App() {
  return (
    <>
+   {/* Barra de navegación */}
      <NavBar />
      <Routes>
        <Route path="/" element={<Home />} />

@@ -6,8 +6,22 @@ import Image from '../components/atoms/Image.jsx';
 import Text from '../components/atoms/Text.jsx';
 import '../styles/pages/ProyectoDetalle.css';
 
+/* 
+  Esta página muestra los detalles completos de un proyecto.
+
+  como funcionalidades tiene:
+  - Obtiene el ID del proyecto desde los parámetros de la URL usando useParams.
+  - Muestra información detallada como la imagen, nombre del proyecto, descripción, link y las tecnologías utilizadas.
+
+  El enlace del proyecto abre una pestaña nueva con seguridad y privacidad usando 'target="_blank"' y 'rel="noopener noreferrer"'.
+  También, se reutilizaron átomos como Text e Image
+
+*/
+
 function ProyectoDetalle() {
+  // Obtiene el parámetro ID de la URL
  const { id } = useParams();
+ // Busca el proyecto correspondiente
  const proyecto = proyectos.find((p) => p.id === parseInt(id));
 
  return (

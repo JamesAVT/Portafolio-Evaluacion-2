@@ -5,6 +5,15 @@ import Button from '../atoms/Button';
 import CardBody from '../molecules/CardBody';
 import { useNavigate } from 'react-router-dom';
 
+/* 
+  Este componente representa una tarjeta de noticia.
+  Aquí, se combinan varios átomos y moléculas como:
+  - Image: que muestra la imagen
+  - CardBody: muestra el título, descripción, link y las tecnologías.
+  - Button: que nos permite navegar a la página de detalle de la noticia.
+
+*/
+
 function NoticiaCard({ noticia }) {
  const navigate = useNavigate();
 

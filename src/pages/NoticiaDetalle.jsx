@@ -6,8 +6,21 @@ import Image from '../components/atoms/Image.jsx';
 import Text from '../components/atoms/Text.jsx';
 import '../styles/pages/ProyectoDetalle.css';
 
+
+/* 
+  Esta página muestra los detalles de una noticia seleccionada.
+
+  Su funcionalidad es obtener el ID de la noticia dese los parámetros de la URL usando useParams y 
+  muestra la info detallada como la imagen, título de la noticia, descripción, link externo y las tecnologías relacionadas.
+
+  Aquí igualmente, usamos 'target="_blank"' y 'rel="noopener noreferrer"' para mantener seguridad y privacidad cuando se abra una pestaña nueva, y
+  reutilizamos los átomos Text e Image para mantener una consistencia.
+
+*/
 function NoticiaDetalle() {
+  // Obtiene el parámetro 'id' de la URL
  const { id } = useParams();
+ // Busca la noticia correspondiente 
  const noticia = noticias.find((p) => p.id === parseInt(id));
 
  return (

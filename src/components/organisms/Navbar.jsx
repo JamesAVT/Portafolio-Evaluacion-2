@@ -1,5 +1,17 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
+/* 
+  Este componente representa la barra de navegación principal de la página.
+  Con (bg="dark") hacemos que la barra sea de color oscuro y con (variant="dark") texto claro.
+  Con (expand="lg") hace que se adapte a pantallas grandes y pequeñas.
+
+  Contiene enlaces internos a las páginas principales:
+  - Proyectos
+  - Sobre mi
+  - Noticias
+
+*/
+
 function NavBar() {
  return (
    <Navbar bg="dark" variant="dark" expand="lg">

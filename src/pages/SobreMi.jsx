@@ -3,6 +3,17 @@ import { Container } from "react-bootstrap";
 import "../styles/pages/SobreMi.css"
 import Text from '../components/atoms/Text.jsx';
 
+/* 
+    En esta página, se muestra mi información personal.
+
+    Como funcionalidades, se presenta un contenedor con información sobre mi, se utiliza nuevamente el átomo Text para manetener una consistencia en lso estilos de textos e
+    incluye dos párrafos de descripción sobre mis habilidades, intereses y motivaciones.
+
+    El 'data-testid="sobre-mi-box"' se utiliza para pruebas unitarias sin depender de clases o textos y
+    el CSS importado permite personalizar la apariencia del contenedor y el texto
+
+*/
+
 function SobreMi() {
     return (
         <Container className="sobre-mi-container">

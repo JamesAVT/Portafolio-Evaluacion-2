@@ -15,12 +15,13 @@
     gap: 1rem; /* Espacio entre cards */
 }
 
+/* Se aplica a las tarjetas de noticias dentro del contenedor principal*/
 .custom-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves al iteractuar */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo*/
 }
 
 .custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta */
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3); /* Agrega una sombra inferior */
 }

@@ -30,6 +30,6 @@ describe('Componente SobreMi', () => {
         // Testing Library no provee un selector directo por clase.
         // data-testid nos permite identificar el elemento
         const caja = screen.getByTestId('sobre-mi-box');
-        expect(caja).toBeTruthy(); // Verifica que la caja exista.
+        expect(caja).toBeTruthy(); // Verifica que la caja exista en el DOM
     });
 })
