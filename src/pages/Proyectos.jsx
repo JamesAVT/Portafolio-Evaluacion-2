@@ -19,18 +19,17 @@ import Text from '../components/atoms/Text.jsx';
 */
 
 function Proyectos() {
- return (
-   <Container className="my-5">
-    <Text variant="h1" className="titulo-proyectos">Proyectos</Text>
-    {/* Contenedor de tarjetas de proyectos */}
-     <Row className="proyectos-row">
-       {proyectos.map((proyecto) => (
-         <ProyectCard key={proyecto.id} proyecto={proyecto} />
-       ))}
-     </Row>
-
-   </Container>
- );
+  return (
+    <Container className="my-5">
+      <Text variant="h1" className="titulo-proyectos">Proyectos</Text>
+      {/* Contenedor de tarjetas de proyectos */}
+      <Row className="proyectos-row">
+        {proyectos.map((proyecto) => (
+          <ProyectCard key={proyecto.id} proyecto={proyecto} />
+        ))}
+      </Row>
+    </Container>
+  );
 }
 
 export default Proyectos;

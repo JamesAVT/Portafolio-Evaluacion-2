@@ -18,21 +18,21 @@ function NoticiaCard({ noticia }) {
  const navigate = useNavigate();
 
  return (
-   <Card data-testid="proyect-card" style={{ width: '18rem' }} className="custom-card">
-     <Image src={noticia.image} alt={noticia.name} className="card-img-top" />
-     <Card.Body>
-       <CardBody
-         title={noticia.name}
-         description={noticia.description}
-         link={noticia.link}
-         tecnologias={noticia.tecnologias}
-       />
-       <Button variant="primary" onClick={() => navigate(`/noticias/${noticia.id}`)}>
+  <Card data-testid="proyect-card" style={{ width: '18rem' }} className="custom-card">
+    <Image src={noticia.image} alt={noticia.name} className="card-img-top" />
+    <Card.Body>
+      <CardBody
+      title={noticia.name}
+      description={noticia.description}
+      link={noticia.link}
+      tecnologias={noticia.tecnologias}
+      />
+      <Button variant="primary" onClick={() => navigate(`/noticias/${noticia.id}`)}>
         Ver detalles
-       </Button>
-     </Card.Body>
-   </Card>
- );
+      </Button>
+    </Card.Body>
+  </Card>
+  );
 }
 
 export default NoticiaCard;

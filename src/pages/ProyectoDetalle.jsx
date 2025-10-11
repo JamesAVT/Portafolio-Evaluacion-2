@@ -20,29 +20,29 @@ import '../styles/pages/ProyectoDetalle.css';
 
 function ProyectoDetalle() {
   // Obtiene el parámetro ID de la URL
- const { id } = useParams();
- // Busca el proyecto correspondiente
- const proyecto = proyectos.find((p) => p.id === parseInt(id));
+  const { id } = useParams();
+  // Busca el proyecto correspondiente
+  const proyecto = proyectos.find((p) => p.id === parseInt(id));
 
- return (
-   <Container className="detalle-container">
-     <Card className="detalle-card">
-       <Image src={proyecto.image} alt={proyecto.name} className="detalle-img" />
-       <Card.Body className="detalle-body">
-         <Text variant="h2" className="detalle-titulo">{proyecto.name}</Text>
-         <Text variant="p" className="detalle-description">{proyecto.description}</Text>
-         <Text className="link">Link</Text>
-         <Text variant="p" className="detalle-link">
-          <a href={proyecto.link} target="_blank" rel="noopener noreferrer">
-            {proyecto.link}
-          </a>
+  return (
+    <Container className="detalle-container">
+      <Card className="detalle-card">
+        <Image src={proyecto.image} alt={proyecto.name} className="detalle-img" />
+        <Card.Body className="detalle-body">
+          <Text variant="h2" className="detalle-titulo">{proyecto.name}</Text>
+          <Text variant="p" className="detalle-description">{proyecto.description}</Text>
+          <Text className="link">Link</Text>
+          <Text variant="p" className="detalle-link">
+            <a href={proyecto.link} target="_blank" rel="noopener noreferrer">
+              {proyecto.link}
+            </a>
           </Text>
           <Text className="tecnologia">Tecnologías utilizadas</Text>
-         <Text variant="p" className="detalle-tecnologia">{proyecto.tecnologias}</Text>
-       </Card.Body>
-     </Card>
-   </Container>
- );
+          <Text variant="p" className="detalle-tecnologia">{proyecto.tecnologias}</Text>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
 }
 
 export default ProyectoDetalle;

@@ -30,7 +30,7 @@ function SobreMi() {
                 </Text>
             </div>
         </Container>
-    )
+    );
 }
 
 export default SobreMi;

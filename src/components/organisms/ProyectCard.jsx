@@ -18,21 +18,21 @@ function ProyectCard({ proyecto }) {
  const navigate = useNavigate();
 
  return (
-   <Card data-testid="proyect-card" style={{ width: '18rem' }} className="custom-card">
-     <Image src={proyecto.image} alt={proyecto.name} className="card-img-top" />
-     <Card.Body>
-       <CardBody
-         title={proyecto.name}
-         description={proyecto.description}
-         link={proyecto.link}
-         tecnologias={proyecto.tecnologias}
-       />
-       <Button variant="primary" onClick={() => navigate(`/proyectos/${proyecto.id}`)}>
+  <Card data-testid="proyect-card" style={{ width: '18rem' }} className="custom-card">
+    <Image src={proyecto.image} alt={proyecto.name} className="card-img-top" />
+    <Card.Body>
+      <CardBody
+      title={proyecto.name}
+      description={proyecto.description}
+      link={proyecto.link}
+      tecnologias={proyecto.tecnologias}
+      />
+      <Button variant="primary" onClick={() => navigate(`/proyectos/${proyecto.id}`)}>
         Ver detalles
-       </Button>
-     </Card.Body>
-   </Card>
- );
+      </Button>
+    </Card.Body>
+  </Card>
+  );
 }
 
 export default ProyectCard;
