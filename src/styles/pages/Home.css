@@ -1,52 +1,245 @@
-/* Contenedor principal de la página (controla todo el layout de la página como altura, centrado, etc) */
-.home-container {
-    min-height: 100vh; /* Asegura que la página siempre tenga la altura completa de la ventana del navegador*/
-    display: flex; /* Usamos Flexbox para alinear los elementos fácilmente */
-    flex-direction: column; /* Ponemos los elementos uno debajo del otro (logo arriba, texto abajo) */
-    justify-content: center; /* Centra todo verticalmente en la página */
-    align-items: center; /* Centra todo horizontalmente en la página */
-    text-align: center; /* Centra el texto denro de cada elemento (h2, p, etc) */
+
+/* ===================================
+   CONTENEDOR PRINCIPAL
+=================================== */
+
+.portfolio-shell {
+  position: relative;
+  isolation: isolate;
 }
 
-/* Contenedor del logo circular (creamos el círculo para la imagen del logo) */
-.logo-circle {
-    width: 200px; /* Ancho del círculo */
-    height: 200px; /* Alto del círculo */
-    border-radius: 50%; /* Hace que el div sea circular */
-    overflow: hidden; /* Recorta la imagen que sobresalga del círculo */
-    margin-bottom: 1.5rem; /* Separación entre el logo y el texto de abajo */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra suave alrededor del círculo para que resalte */
+.portfolio-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
 }
 
-/* Estilo para la imagen del logo (hacemos que la imagen se adapte al círculo sin estirarse ni deformarse) */
-.logo-circle img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: 100%; /* Hace que la imagen ocupe todo el alto del contenedor */
-    object-fit: cover; /* Hace que la imagen se ajuste al tamaño del div sin deformarse */
+/* Scrollbar para Chrome y Edge */
+.portfolio-glass::-webkit-scrollbar {
+  width: 5px;
 }
 
-/* Color del texto del nombre */
-.nombre-autor {
-    color: white;
+.portfolio-glass::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Color del texto de la breve info debajo de nombre*/
-.informacion-autor {
-    color: white;
+.portfolio-glass::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
 }
 
-/* Botón de GitHub*/
-.github-button {
-    display: inline-block; /* Hace que el <a> se comporte como bloque de línea, */
-    padding: 0.6em 1.2em; /* Espaciado interno: 0.6em arriba/abajo y 1.2em izquierda/derecha */
-    background-color: #24292f; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border-radius: 8px; /* Bordes redondeados del botón */
-    text-decoration: none; /* Elimina cualquier decoración de texto */
-    font-weight: 500; /* Grosor de la fuente*/
-    transition: background-color 0.25s; /* Animación suave de 0.25s al cambiar el color de fondo (hover) */
+.portfolio-glass::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
-.github-button:hover {
-    background-color: #444c56; /* Color de fondo cuando pasamos el mouse por encima (hover) */
+/* ===================================
+   IMAGEN DE PERFIL
+=================================== */
+
+.portfolio-avatar {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.portfolio-avatar:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 30px rgba(125, 211, 252, 0.22),
+    0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   TARJETAS DE VIDRIO
+=================================== */
+
+.portfolio-inner-glass {
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-inner-glass:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ===================================
+   TARJETAS DE PROYECTOS
+=================================== */
+
+.portfolio-project-card {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-project-card:hover {
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22),
+    0 0 20px rgba(125, 211, 252, 0.08);
+}
+
+/* ===================================
+   BOTONES
+=================================== */
+
+
+.portfolio-button {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transform: translateY(0);
+  text-decoration: none;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.45s ease;
+}
+
+.portfolio-button:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.portfolio-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-button {
+    transition: none;
+  }
+}
+
+/* ===================================
+   NAVEGACIÓN LATERAL
+=================================== */
+
+.portfolio-navigation {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+
+  padding: 12px 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+
+  background: rgba(10, 30, 50, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.portfolio-nav-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  cursor: pointer;
+
+  transition:
+    height 0.3s ease,
+    border-radius 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.portfolio-nav-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.2);
+}
+
+.portfolio-nav-dot.active {
+  height: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.portfolio-nav-dot:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 640px) {
+  .portfolio-navigation {
+    right: 8px;
+    gap: 10px;
+    padding: 10px 6px;
+  }
+
+  .portfolio-nav-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .portfolio-nav-dot.active {
+    height: 16px;
+  }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-avatar,
+  .portfolio-inner-glass,
+  .portfolio-project-card,
+  .portfolio-button,
+  .portfolio-nav-dot {
+    transition: none;
+  }
+}
+
+/* Ajustes para pantallas pequeñas y de poca altura */
+@media (max-width: 639px) and (max-height: 700px) {
+  #inicio {
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  #inicio .portfolio-avatar {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 16px;
+  }
+
+  #inicio h1 {
+    font-size: 1.75rem;
+  }
+
+  #inicio .portfolio-button {
+    margin-top: 16px;
+  }
 }

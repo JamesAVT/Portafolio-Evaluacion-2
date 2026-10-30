@@ -1,27 +1,52 @@
-const proyectos = [{
+import nolimitsImg from '../assets/img/nolimits.webp';
+import flightlab from '../assets/img/flightlab.webp';
+
+const proyectos = [
+  {
     id: 1,
-    name: 'Proyecto ValhallaRide',
-    description: 'ValhallaRide es un ecommerce especializado en accesorios para motociclistas. En este proyecto, nos encargamos del desarrollo integral del backend, incluyendo la gestión de la base de datos y la creación de APIs robustas, lo que permite una comunicación eficiente y segura entre los distintos servicios del sistema.',
-    link: 'https://github.com/JamesAVT/ValhallaRideProject',
-    tecnologias : 'Java | Spring Boot | MySQL | Maven | Swagger | Spring HATEOAS | JUnit Jupiter | DataFaker',
-    image: 'https://i.pinimg.com/736x/6d/a1/8a/6da18a021870ddc0262347a3d0394808.jpg'
-},
-{
+    name: 'NoLimits',
+    categoria: 'Full Stack / Aplicación Web',
+
+    resumen:
+      'Plataforma de entretenimiento que integra APIs de películas, series, videojuegos, libros y música, además de autenticación, favoritos, reseñas y un chatbot con IA.',
+
+    description:
+      'Aplicación Full Stack desarrollada con React y Spring Boot que integra servicios externos como TMDB, IGDB, RAWG, Google Books y Jikan para consultar contenido de entretenimiento. Incluye autenticación, favoritos, reseñas, búsqueda de contenido y un chatbot con inteligencia artificial mediante OpenAI API.',
+
+    links: [
+    {
+        nombre: 'Frontend',
+        url: 'https://github.com/SimonKaiak/NoLimits-Front',
+    },
+    {
+        nombre: 'Backend',
+        url: 'https://github.com/SimonKaiak/NoLimits-SpringBoot.git',
+    },
+    ],
+
+    tecnologias:
+      'React | Spring Boot | PostgreSQL | TMDB | RAWG | OpenAI API',
+
+    image: nolimitsImg,
+  },
+  {
     id: 2,
-    name: 'Proyecto NoLimits',
-    description: 'NoLimits es un ecommerce dedicado a la venta de productos de entretenimiento, incluyendo películas, videojuegos y accesorios relacionados. En este proyecto, nos encargamos del desarrollo integral del frontend, creando una interfaz intuitiva y atractiva, optimizada para una experiencia de usuario fluida y agradable. Además, implementamos componentes interactivos y diseño responsivo, asegurando que la plataforma funcione de manera óptima en diferentes dispositivos y resoluciones. ',
-    link: 'https://github.com/JamesAVT/NoLimits',
-    tecnologias: 'HTML | JavaScript | CSS | Bootstrap',
-    image: 'https://www.nolimits.com/wp-content/uploads/2022/04/logo-bianco-2.png'
-},
-{
-    id: 3,
-    name: 'Base de datos NoLimits',
-    description: 'Gestión y optimización de la base de datos de NoLimits. En este proyecto, nos encargamos de diseñar y mantener una base de datos sólida, funcional y segura, asegurando alta confiabilidad y eficiencia en las operaciones del ecommerce. Implementamos triggers y packages para automatizar procesos, mejorar la integridad de los datos y optimizar el rendimiento de las consultas, garantizando que la información se gestione de manera eficiente y consistente. ',
-    link: 'https://gist.github.com/JamesAVT',
-    tecnologias: 'SQL',
-    image: 'https://i.pinimg.com/564x/d5/1d/8b/d51d8b2ff28db324ed1be2766f793c43.jpg'
-}
+    name: 'FlightLab',
+    categoria: 'Desarrollo Móvil / Aviación',
+
+    resumen:
+      'Aplicación móvil para calcular energía de frenado aeronáutica mediante interpolación de datos y parámetros operacionales.',
+
+    description:
+      'Aplicación móvil desarrollada con React Native y Expo. Permite calcular Brake Energy utilizando velocidad, peso, temperatura, altitud de presión y viento, mediante interpolación de tablas.',
+
+    link: 'https://github.com/JamesAVT/FlightLab',
+
+    tecnologias:
+      'React Native | Expo | JavaScript | Context API',
+
+    image: flightlab,
+  },
 ];
 
 export default proyectos;
