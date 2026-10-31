@@ -105,112 +105,102 @@ function Home() {
             backdrop-blur-lg
             scroll-smooth
           "
-        >
-
-          
-        {/* ========================= */}
-        {/* PRESENTACIÓN              */}
-        {/* ========================= */}
-        <section
-          id="inicio"
-          className="
-            relative flex min-h-full flex-col
-            items-center
-            gap-10 px-6 py-10 text-center
-            sm:gap-0 sm:justify-center
-            sm:px-10 sm:py-16
-          "
-        >
-          {/* CONTENIDO PRINCIPAL */}
-          <div
+        > 
+        
+          {/* ========================= */}
+          {/* PRESENTACIÓN              */}
+          {/* ========================= */}
+          <section
+            id="inicio"
             className="
-              flex w-full flex-1 flex-col
+              relative flex min-h-full flex-col
               items-center justify-center
+              px-5 py-8 text-center
+              sm:px-10 sm:py-12
             "
           >
-            <img
-              src={foto}
-              alt="Imagen de perfil de James Videla"
+            {/* CONTENIDO PRINCIPAL */}
+            <div
               className="
-                portfolio-avatar
-                mb-5 h-36 w-36
-                rounded-full object-cover
-                ring-4 ring-white/40
-                shadow-2xl
-                sm:h-44 sm:w-44
-              "
-            />
-
-            <h1 className="text-4xl font-bold text-white sm:text-5xl">
-              James Videla
-            </h1>
-
-            <p
-              className="
-                mt-3 max-w-[280px]
-                text-base leading-relaxed text-white/90
-                sm:max-w-none sm:text-xl
+                flex w-full flex-col
+                items-center justify-center
+                pb-16
+                sm:pb-20
               "
             >
-              Analista Programador | Desarrollador de Software
-            </p>
+              <img
+                src={foto}
+                alt="Imagen de perfil de James Videla"
+                className="
+                  portfolio-avatar
+                  mb-4 h-24 w-24
+                  rounded-full object-cover
+                  ring-4 ring-white/40
+                  shadow-2xl
+                  sm:mb-5 sm:h-36 sm:w-36
+                  lg:h-44 lg:w-44
+                "
+              />
 
-            <p
+              <h1
+                className="
+                  text-3xl font-bold text-white
+                  sm:text-4xl lg:text-5xl
+                "
+              >
+                James Videla
+              </h1>
+
+              <p
+                className="
+                  mt-3 max-w-sm
+                  text-sm leading-relaxed text-white/90
+                  sm:max-w-none sm:text-lg
+                  lg:text-xl
+                "
+              >
+                Analista Programador | Desarrollador de Software
+              </p>
+
+              <p
+                className="
+                  mt-3 max-w-lg
+                  text-sm leading-relaxed text-white/75
+                  sm:text-base
+                "
+              >
+                Apasionado por la tecnología, el desarrollo
+                de aplicaciones y la creación de soluciones
+                digitales.
+              </p>
+            </div>
+
+            {/* INDICADOR DE SCROLL - SOLO VISUAL */}
+            <div
               className="
-                mt-3 max-w-lg
-                text-sm leading-relaxed text-white/75
-                sm:text-base
+                pointer-events-none
+                absolute bottom-[clamp(2rem,8dvh,6rem)] left-1/2
+                flex -translate-x-1/2
+                flex-col items-center justify-center
+                gap-1
+                whitespace-nowrap
+                px-3 py-2
+                text-white/80
+                select-none
               "
             >
-              Apasionado por la tecnología, el desarrollo
-              de aplicaciones y la creación de soluciones
-              digitales.
-            </p>
+              <span className="text-xs sm:text-sm">
+                Desliza para conocerme
+              </span>
 
-            <button
-              type="button"
-              onClick={() => scrollToSection('proyectos')}
-              className="
-                portfolio-button
-                mt-6 cursor-pointer rounded-xl
-                border border-white/30
-                bg-white/20 px-8 py-3
-                font-semibold text-white
-                hover:bg-white/30
-                focus-visible:outline-2
-                focus-visible:outline-offset-2
-                focus-visible:outline-white
-              "
-            >
-              Ver mis proyectos ↓
-            </button>
-          </div>
-
-          {/* INDICADOR DE SCROLL */}
-          <button
-            type="button"
-            onClick={() => scrollToSection('sobre-mi')}
-            className="
-              flex shrink-0 cursor-pointer flex-col
-              items-center gap-2
-              border-0 bg-transparent
-              pb-2 text-white/80
-              transition hover:text-white
-              sm:absolute sm:bottom-5
-              sm:left-1/2 sm:pb-0
-              sm:-translate-x-1/2
-            "
-          >
-            <span className="whitespace-nowrap text-sm">
-              Desliza para conocerme
-            </span>
-
-            <span className="animate-bounce text-xl">
-              ↓
-            </span>
-          </button>
-        </section>
-
+              <span
+                aria-hidden="true"
+                className="animate-bounce text-lg sm:text-xl"
+              >
+                ↓
+              </span>
+            </div>
+          </section>
 
           {/* ========================= */}
           {/* SOBRE MÍ                  */}
@@ -512,9 +502,6 @@ function Home() {
                 shadow-lg sm:p-8
               "
             >
-              <h3 className="mb-4 text-xl font-semibold text-white">
-                Conectemos
-              </h3>
 
               <p className="mb-6 text-base leading-relaxed text-white/80">
                 Estoy abierto a nuevas oportunidades profesionales,
@@ -554,37 +541,33 @@ function Home() {
               </div>
             </div>
 
-            <p className="mt-6 text-sm text-white/50">
-              © {new Date().getFullYear()} James Videla
-            </p>
+            <div className="w-full pt-4 sm:pt-6">
+              <p className="m-0 text-center text-sm text-white/50">
+                © {new Date().getFullYear()} James Videla
+              </p>
+            </div>
           </section>
 
         </div>
 
-        {/* NAVEGACIÓN DISCRETA */}
-        <nav
-          className="portfolio-navigation"
-          aria-label="Navegación por secciones"
+        {/* INDICADOR DE SECCIÓN ACTIVA */}
+        <div
+          className="portfolio-navigation pointer-events-none"
+          aria-label="Indicador de sección actual"
         >
           {secciones.map((seccion) => (
-            <button
+            <span
               key={seccion.id}
-              type="button"
-              onClick={() => scrollToSection(seccion.id)}
-              aria-label={`Ir a ${seccion.nombre}`}
+              aria-label={seccion.nombre}
               aria-current={
                 seccionActiva === seccion.id ? 'location' : undefined
               }
-              title={seccion.nombre}
-              className={
-                `portfolio-nav-dot ${
-                  seccionActiva === seccion.id ? 'active' : ''
-                }`
-              }
+              className={`portfolio-nav-dot ${
+                seccionActiva === seccion.id ? 'active' : ''
+              }`}
             />
           ))}
-        </nav>
-
+        </div>
       </div>
     </main>
   );

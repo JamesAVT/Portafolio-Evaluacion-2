@@ -128,8 +128,9 @@
   }
 }
 
+
 /* ===================================
-   NAVEGACIÓN LATERAL
+   INDICADOR LATERAL DE SECCIONES
 =================================== */
 
 .portfolio-navigation {
@@ -152,9 +153,16 @@
 
   background: rgba(10, 30, 50, 0.25);
   backdrop-filter: blur(12px);
+
+  /* Indicador visual, no interactivo */
+  pointer-events: none;
+  user-select: none;
 }
 
 .portfolio-nav-dot {
+  display: block;
+  flex-shrink: 0;
+
   width: 7px;
   height: 7px;
   padding: 0;
@@ -164,29 +172,16 @@
 
   background: rgba(255, 255, 255, 0.4);
 
-  cursor: pointer;
-
   transition:
     height 0.3s ease,
     border-radius 0.3s ease,
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.portfolio-nav-dot:hover {
-  background: rgba(255, 255, 255, 0.85);
-  transform: scale(1.2);
+    background-color 0.3s ease;
 }
 
 .portfolio-nav-dot.active {
   height: 20px;
   border-radius: 10px;
   background: #ffffff;
-}
-
-.portfolio-nav-dot:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 4px;
 }
 
 /* ===================================
