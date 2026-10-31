@@ -35,7 +35,7 @@ const proyectos = [
     categoria: 'Desarrollo Móvil / Aviación',
 
     resumen:
-      'Aplicación móvil para calcular energía de frenado aeronáutica mediante interpolación de datos y parámetros operacionales.',
+      'Aplicación móvil desarrollada con React Native, Expo y TypeScript que permite calcular la energía de frenado de una aeronave mediante tablas de referencia e interpolación matemática, considerando parámetros como velocidad, peso, temperatura y altitud de presión.',
 
     description:
       'Aplicación móvil desarrollada con React Native y Expo. Permite calcular Brake Energy utilizando velocidad, peso, temperatura, altitud de presión y viento, mediante interpolación de tablas.',

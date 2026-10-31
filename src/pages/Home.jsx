@@ -7,7 +7,7 @@ import '../styles/pages/Home.css';
 const tecnologias = [
   {
     categoria: 'Frontend',
-    herramientas: ['React', 'Vite', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind'],
+    herramientas: ['React', 'Vite', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Bootstrap', 'Tailwind'],
   },
   {
     categoria: 'Backend',
@@ -239,8 +239,8 @@ function Home() {
               "
             >
               <p className="text-base leading-relaxed text-white/90 sm:text-lg">
-                ¡Hola! Soy James Videla, titulado de Analista Programador
-                en Duoc UC, con un enfoque en el desarrollo de software.
+                ¡Hola! Soy James Videla, Analista Programador
+                con un enfoque en el desarrollo de software.
                 Me apasiona la programación, aprender nuevas tecnologías
                 y crear aplicaciones que combinen funcionalidad, eficiencia
                 y una buena experiencia de usuario.
@@ -295,18 +295,21 @@ function Home() {
                       hover:shadow-2xl
                     "
                   >
+                    
                     {/* IMAGEN */}
-                    <div className="relative h-44 overflow-hidden bg-black/20">
+                    <div className="relative flex h-44 items-center justify-center overflow-hidden bg-black sm:h-48">
 
                       <img
                         src={proyecto.image}
                         alt={proyecto.name}
-                        className="
-                          h-48 w-full
-                          object-cover object-[center_49%]
-                          transition-transform duration-500
-                          group-hover:scale-105
-                        "
+                        className={`
+                          h-full w-full
+                          ${
+                            proyecto.name === 'FlightLab'
+                              ? 'object-contain'
+                              : 'object-cover object-center transition-transform duration-500 group-hover:scale-105'
+                          }
+                        `}
                       />
 
                       <div
@@ -514,8 +517,10 @@ function Home() {
               </h3>
 
               <p className="mb-6 text-base leading-relaxed text-white/80">
-                Estoy abierto a nuevas oportunidades profesionales donde
-                pueda aportar mis conocimientos, seguir aprendiendo y
+                Estoy abierto a nuevas oportunidades profesionales,
+                tanto para formar parte de equipos de desarrollo como
+                para colaborar en proyectos tecnológicos. Busco aportar
+                mis conocimientos, seguir aprendiendo y
                 crecer como desarrollador de software.
               </p>
 
