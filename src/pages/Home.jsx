@@ -15,7 +15,7 @@ const tecnologias = [
   },
   {
     categoria: 'Bases de datos',
-    herramientas: ['PostgreSQL', 'MySQL', 'Oracle SQL'],
+    herramientas: ['PostgreSQL', 'MySQL', 'Oracle SQL', 'MongoDB'],
   },
   {
     categoria: 'Desarrollo móvil',
